@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ProxiMA Nexus</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -12,288 +13,228 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(145deg, #0f172a, #020617, #0f172a);
-      color: #ffffff;
+      background-color: #0f172a;
+      color: white;
       text-align: center;
     }
 
     .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 20px 80px;
+      max-width: 950px;
+      margin: auto;
+      padding: 50px 20px 80px;
     }
 
+    /* LOGO */
     .logo {
-      display: block;
       width: 300px;
-      max-width: 100%;
-      margin: 0 auto 24px;
+      display: block;
+      margin: 0 auto 20px;
     }
 
-    .tagline-top {
-      margin: 0 0 18px;
+    /* TAGLINE */
+    .tagline {
+      color: #cbd5f5;
       font-size: 18px;
-      line-height: 1.7;
-      color: #dbe5f3;
-      letter-spacing: 0.3px;
+      margin-bottom: 25px;
     }
 
     .divider {
-      width: 100%;
       height: 1px;
-      background: rgba(255, 255, 255, 0.12);
-      margin: 28px 0 36px;
+      background: rgba(255,255,255,0.1);
+      margin: 30px 0;
     }
 
-    .section-title {
-      margin: 0 0 18px;
-      font-size: 17px;
-      font-weight: 500;
-      color: #dbe5f3;
-      letter-spacing: 0.4px;
-    }
-
-    .about-box {
-      background: rgba(17, 31, 52, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 28px 22px;
-      margin-bottom: 42px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-    }
-
-    .about-box h1 {
-      margin: 0 0 14px;
-      font-size: 34px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      color: #7dd3fc;
-    }
-
-    .about-box p {
-      margin: 0 auto;
-      max-width: 760px;
-      font-size: 16px;
-      line-height: 1.9;
-      color: #dbe5f3;
-    }
-
-    .umbrella-box {
-      background: rgba(17, 31, 52, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 28px 22px;
-      margin-bottom: 44px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-    }
-
-    .umbrella-box h2 {
-      margin: 0 0 14px;
-      font-size: 28px;
-      font-weight: 600;
-      color: #e9d29a;
-    }
-
-    .umbrella-box p {
-      margin: 0 auto;
-      max-width: 760px;
-      font-size: 16px;
-      line-height: 1.9;
-      color: #dbe5f3;
-    }
-
-    .area-title {
-      margin: 0 0 26px;
-      font-size: 17px;
-      font-weight: 500;
-      color: #dbe5f3;
-      letter-spacing: 0.4px;
-    }
-
-    .area-card {
-      background: rgba(17, 31, 52, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+    /* ABOUT */
+    .about {
+      background: #111f34;
+      padding: 25px;
       border-radius: 16px;
-      padding: 22px 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+      margin-bottom: 40px;
     }
 
-    .area-card h3 {
-      margin: 0 0 12px;
-      font-size: 24px;
-      font-weight: 600;
-      color: #f3e7bf;
+    .about h1 {
+      color: #00eaff;
+      font-size: 34px;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
     }
 
-    .area-card p {
-      margin: 0;
-      font-size: 15px;
+    .about p {
+      color: #cbd5f5;
       line-height: 1.8;
-      color: #dbe5f3;
+      font-size: 16px;
     }
 
-    .blue-accent {
-      color: #7dd3fc;
+    /* UMBRELLA */
+    .umbrella {
+      background: #111f34;
+      padding: 25px;
+      border-radius: 16px;
+      margin-bottom: 40px;
     }
 
-    .gold-accent {
-      color: #e9d29a;
-    }
-
-    .contact-box {
-      margin-top: 46px;
-      padding: 26px 20px;
-      background: rgba(17, 31, 52, 0.84);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-    }
-
-    .contact-box h2 {
-      margin: 0 0 12px;
+    .umbrella h2 {
+      color: #f2d28b;
       font-size: 28px;
-      font-weight: 600;
-      color: #e9d29a;
+      margin-bottom: 12px;
     }
 
-    .contact-box p {
-      margin: 0 auto 18px;
-      max-width: 680px;
-      font-size: 15px;
+    .umbrella p {
+      color: #cbd5f5;
       line-height: 1.8;
-      color: #dbe5f3;
+      font-size: 16px;
     }
 
-    .button {
+    /* SECTION TITLE */
+    .section-title {
+      color: #cbd5f5;
+      margin-bottom: 25px;
+      font-size: 17px;
+    }
+
+    /* CARDS */
+    .card {
+      background: #111f34;
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #f2d28b;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #cbd5f5;
+      line-height: 1.8;
+    }
+
+    /* BRAND TEXT */
+    .blue {
+      color: #00eaff;
+    }
+
+    .gold {
+      color: #f2d28b;
+    }
+
+    /* CONTACT */
+    .contact {
+      margin-top: 40px;
+      background: #111f34;
+      padding: 25px;
+      border-radius: 16px;
+    }
+
+    .contact h2 {
+      color: #f2d28b;
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      color: #cbd5f5;
+      margin-bottom: 15px;
+    }
+
+    .btn {
       display: inline-block;
-      padding: 14px 24px;
-      border-radius: 10px;
+      padding: 14px 22px;
       background: #00eaff;
       color: #0f172a;
+      font-weight: bold;
+      border-radius: 10px;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
-      margin-top: 6px;
     }
 
     .details {
-      margin-top: 18px;
-      font-size: 15px;
-      line-height: 1.9;
-      color: #cbd5e1;
+      margin-top: 15px;
+      color: #cbd5f5;
     }
 
     .details a {
-      color: #7dd3fc;
+      color: #00eaff;
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
-      .wrap {
-        padding: 34px 16px 60px;
-      }
-
-      .logo {
-        width: 260px;
-      }
-
-      .about-box h1,
-      .umbrella-box h2,
-      .contact-box h2 {
-        font-size: 28px;
-      }
-
-      .area-card h3 {
-        font-size: 22px;
-      }
-    }
   </style>
 </head>
-<body>
-  <main class="wrap">
-    <img src="20260406_162934.jpg" alt="ProxiMA Nexus Logo" class="logo" />
 
-    <p class="tagline-top">Structured detection. Verified reality.</p>
+<body>
+
+  <main class="wrap">
+
+    <!-- LOGO -->
+    <img src="20260406_162934.jpg" class="logo" alt="ProxiMA Nexus Logo">
+
+    <div class="tagline">Structured detection. Verified reality.</div>
 
     <div class="divider"></div>
 
-    <section class="about-box">
-      <h1>About ProxiMA Nexus</h1>
+    <!-- ABOUT -->
+    <section class="about">
+      <h1>ProxiMA Nexus</h1>
       <p>
-        ProxiMA Nexus is a structured operational intelligence umbrella designed to identify hidden
-        weaknesses, surface overlooked patterns, and convert observation into credible, decision-useful
-        insight. It is built for environments where accuracy, trust, and controlled assessment matter
-        more than surface-level feedback.
+        ProxiMA Nexus is a structured operational intelligence system designed to identify hidden weaknesses,
+        surface overlooked patterns, and transform observation into controlled, decision-grade insight.
       </p>
     </section>
 
-    <section class="umbrella-box">
+    <!-- UMBRELLA -->
+    <section class="umbrella">
       <h2>Umbrella Structure</h2>
       <p>
-        ProxiMA Nexus operates as a central framework with multiple specialised branches. Each branch
-        applies the same disciplined method of detection, verification, and delivery, while adapting
-        its focus to the realities of a specific sector. This creates one recognisable system with
-        multiple operational lenses under a single brand.
+        One system. Multiple operational lenses. Each branch applies the same method of detection,
+        verification, and delivery, adapted to its specific environment.
       </p>
     </section>
 
-    <h2 class="area-title">Select Operational Area</h2>
+    <!-- AREAS -->
+    <div class="section-title">Select Operational Area</div>
 
-    <section class="area-card">
-      <h3><span class="blue-accent">Proxi</span><span class="gold-accent">MA</span> Healthcare</h3>
-      <p>
-        Assessment of clinical and care environments, including hospitals, clinics, care homes,
-        and community care services.
-      </p>
-    </section>
+    <div class="card">
+      <h3><span class="blue">Proxi</span><span class="gold">MA</span> Healthcare</h3>
+      <p>Assessment of hospitals, clinics, care homes, and community care environments.</p>
+    </div>
 
-    <section class="area-card">
-      <h3><span class="blue-accent">Proxi</span><span class="gold-accent">MA</span> Social Care</h3>
-      <p>
-        Evaluation of long-term support environments, including residential care homes,
-        supported living, and domiciliary care services.
-      </p>
-    </section>
+    <div class="card">
+      <h3><span class="blue">Proxi</span><span class="gold">MA</span> Social Care</h3>
+      <p>Evaluation of residential care, supported living, and domiciliary services.</p>
+    </div>
 
-    <section class="area-card">
-      <h3><span class="blue-accent">Proxi</span><span class="gold-accent">MA</span> Hospitality</h3>
-      <p>
-        Analysis of service environments, including hotels, restaurants, resorts,
-        and guest-focused operations.
-      </p>
-    </section>
+    <div class="card">
+      <h3><span class="blue">Proxi</span><span class="gold">MA</span> Hospitality</h3>
+      <p>Analysis of hotels, restaurants, and service-driven environments.</p>
+    </div>
 
-    <section class="area-card">
-      <h3><span class="blue-accent">Proxi</span><span class="gold-accent">MA</span> Corporate</h3>
-      <p>
-        Assessment of organisational performance, including offices, business operations,
-        and administrative environments.
-      </p>
-    </section>
+    <div class="card">
+      <h3><span class="blue">Proxi</span><span class="gold">MA</span> Corporate</h3>
+      <p>Assessment of business operations, teams, and organisational performance.</p>
+    </div>
 
-    <section class="area-card">
-      <h3><span class="blue-accent">Proxi</span><span class="gold-accent">MA</span> Education</h3>
-      <p>
-        Evaluation of learning environments, including schools, colleges, training centres,
-        and educational institutions.
-      </p>
-    </section>
+    <div class="card">
+      <h3><span class="blue">Proxi</span><span class="gold">MA</span> Education</h3>
+      <p>Evaluation of schools, training centres, and educational institutions.</p>
+    </div>
 
-    <section class="contact-box">
+    <!-- CONTACT -->
+    <section class="contact">
       <h2>Contact</h2>
-      <p>
-        ProxiMA Nexus is currently being positioned for structured expansion. For enquiries,
-        collaboration, or early-stage contact, use the address below.
-      </p>
+      <p>For enquiries or collaboration:</p>
 
-      <a class="button" href="mailto:contact@proximanexus.co.uk">Contact ProxiMA Nexus</a>
+      <a class="btn" href="mailto:contact@proximanexus.co.uk">
+        Contact ProxiMA Nexus
+      </a>
 
       <div class="details">
         <div><a href="mailto:contact@proximanexus.co.uk">contact@proximanexus.co.uk</a></div>
         <div><a href="https://www.proximanexus.co.uk">www.proximanexus.co.uk</a></div>
       </div>
     </section>
+
   </main>
+
 </body>
 </html>
