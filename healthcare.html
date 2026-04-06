@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProxiMA Healthcare</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0a1530;
+      --panel: rgba(12, 24, 52, 0.90);
+      --panel-border: rgba(240, 210, 138, 0.22);
+      --text: #ffffff;
+      --muted: #d7def0;
+      --blue: #129dff;
+      --gold: #f0d28a;
+      --gold-strong: #e2be68;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% 20%, rgba(30, 80, 170, 0.20), transparent 28%),
+        radial-gradient(circle at 50% 50%, rgba(18, 157, 255, 0.08), transparent 38%),
+        linear-gradient(180deg, #09142c 0%, #0b1733 45%, #09142c 100%);
+      text-align: center;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 34px 20px 80px;
+    }
+
+    .top-logo {
+      width: 300px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 18px;
+      border-radius: 10px;
+    }
+
+    .subheading {
+      margin: 0 0 18px;
+      font-size: 19px;
+      color: var(--gold);
+    }
+
+    .line-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      margin: 10px 0 22px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .line-title::before,
+    .line-title::after {
+      content: "";
+      display: block;
+      width: 180px;
+      height: 1px;
+      background: rgba(240, 210, 138, 0.30);
+    }
+
+    .domain-card,
+    .package-card {
+      background: linear-gradient(180deg, rgba(14, 28, 58, 0.98), rgba(10, 21, 48, 0.98));
+      border: 1px solid rgba(240, 210, 138, 0.28);
+      border-radius: 14px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    .domain-top,
+    .package-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px 10px;
+      border-bottom: 1px solid rgba(240, 210, 138, 0.20);
+    }
+
+    .domain-name,
+    .package-name {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .domain-body,
+    .package-body {
+      padding: 14px 18px 18px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .package-top .left {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .package-label {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .package-detail {
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    .package-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .select-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0f1d3d, #162c54);
+      border: 1px solid rgba(240, 210, 138, 0.45);
+      color: var(--gold);
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .line-title::before,
+      .line-title::after {
+        width: 70px;
+      }
+
+      .domain-top,
+      .package-top,
+      .package-row {
+        gap: 10px;
+      }
+
+      .domain-name,
+      .package-name,
+      .package-label {
+        font-size: 18px;
+      }
+
+      .price {
+        font-size: 18px;
+      }
+
+      .domain-body,
+      .package-body {
+        text-align: left;
+      }
+
+      .package-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .select-btn {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+
+    <img src="20260406_162934.jpg" alt="ProxiMA Nexus Logo" class="top-logo">
+
+    <p class="subheading">ProxiMA Healthcare</p>
+
+    <div class="line-title">Select Domain to Assess</div>
+
+    <section class="domain-card">
+      <div class="domain-top">
+        <div class="domain-name">Clinical / Care Delivery</div>
+        <div class="price">£70</div>
+      </div>
+      <div class="domain-body">
+        Evaluation of patient care practices and service delivery, focusing on quality, safety, and outcome consistency.
+      </div>
+    </section>
+
+    <section class="domain-card">
+      <div class="domain-top">
+        <div class="domain-name">Workforce &amp; Staffing</div>
+        <div class="price">£70</div>
+      </div>
+      <div class="domain-body">
+        Assessment of staffing levels, competencies, workforce structure, and support systems that influence safe care delivery.
+      </div>
+    </section>
+
+    <section class="domain-card">
+      <div class="domain-top">
+        <div class="domain-name">Operations &amp; Workflow</div>
+        <div class="price">£70</div>
+      </div>
+      <div class="domain-body">
+        Review of process flow, operational coordination, resource usage, and execution efficiency across healthcare activity.
+      </div>
+    </section>
+
+    <section class="domain-card">
+      <div class="domain-top">
+        <div class="domain-name">Communication &amp; Coordination</div>
+        <div class="price">£70</div>
+      </div>
+      <div class="domain-body">
+        Examination of communication systems, handovers, teamwork, escalation paths, and multi-role coordination.
+      </div>
+    </section>
+
+    <section class="domain-card">
+      <div class="domain-top">
+        <div class="domain-name">Governance &amp; Compliance</div>
+        <div class="price">£70</div>
+      </div>
+      <div class="domain-body">
+        Analysis of policy adherence, governance discipline, quality controls, and alignment with required standards.
+      </div>
+    </section>
+
+    <section class="domain-card">
+      <div class="domain-top">
+        <div class="domain-name">Safety, Risk Management &amp; Safeguarding</div>
+        <div class="price">£70</div>
+      </div>
+      <div class="domain-body">
+        Review of incident prevention, risk controls, safeguarding response, accountability pathways, and protective oversight.
+      </div>
+    </section>
+
+    <div class="line-title">Or Select Assessment Scope</div>
+
+    <section class="package-card">
+      <div class="package-top">
+        <div class="left">
+          <div class="package-label">Focused</div>
+          <div class="package-detail">| Any 2 Domains</div>
+        </div>
+        <div class="price">£120</div>
+      </div>
+      <div class="package-body">
+        <div class="package-row">
+          <div>Cover any 2 areas | £120</div>
+          <a class="select-btn" href="mailto:contact@proximanexus.co.uk?subject=Focused%20Healthcare%20Assessment">Select</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-card">
+      <div class="package-top">
+        <div class="left">
+          <div class="package-label">Advanced</div>
+          <div class="package-detail">| Any 4 Domains</div>
+        </div>
+        <div class="price">£220</div>
+      </div>
+      <div class="package-body">
+        <div class="package-row">
+          <div>Cover any 4 areas | £220</div>
+          <a class="select-btn" href="mailto:contact@proximanexus.co.uk?subject=Advanced%20Healthcare%20Assessment">Select</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="package-card">
+      <div class="package-top">
+        <div class="left">
+          <div class="package-label">Full Assessment</div>
+          <div class="package-detail">| All 6 Domains</div>
+        </div>
+        <div class="price">£300</div>
+      </div>
+      <div class="package-body">
+        <div class="package-row">
+          <div>Cover all 6 areas | £300</div>
+          <a class="select-btn" href="mailto:contact@proximanexus.co.uk?subject=Full%20Healthcare%20Assessment">Select</a>
+        </div>
+      </div>
+    </section>
+
+    <a class="back-link" href="index.html">← Back to ProxiMA Nexus</a>
+  </main>
+</body>
+</html>
