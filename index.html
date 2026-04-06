@@ -1,107 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ProxiMA Nexus</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: white;
+      background: linear-gradient(145deg, #0f172a, #020617, #0f172a);
+      color: #ffffff;
       text-align: center;
     }
 
-    .container {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 56px 20px 72px;
     }
 
     h1 {
-      color: #00eaff;
-      font-size: 34px;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 38px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #7dd3fc;
     }
 
-    .subtitle {
-      color: #cbd5f5;
-      margin-bottom: 40px;
+    .tagline {
+      margin: 14px 0 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #cbd5e1;
     }
 
-    img {
+    .logo {
       display: block;
-      margin: 30px auto;
-      width: 380px;
+      width: 340px;
+      max-width: 100%;
+      margin: 34px auto 26px;
+    }
+
+    .panel {
+      margin: 0 auto 28px;
+      padding: 24px 22px;
+      background: rgba(17, 31, 52, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+    }
+
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #e9d29a;
+    }
+
+    .panel p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #dbe5f3;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 28px;
     }
 
     .card {
-      background: #111f34;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px 0;
+      padding: 20px 18px;
+      background: rgba(17, 31, 52, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
     }
 
-    .section {
-      margin-top: 50px;
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #e9d29a;
     }
 
-    a {
-      color: #00eaff;
-      text-decoration: none;
+    .card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.75;
+      color: #dbe5f3;
+    }
+
+    .contact {
+      margin-top: 10px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #00eaff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      background: #c8a96a;
       color: #0f172a;
-      border-radius: 8px;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .details {
+      margin-top: 18px;
+      font-size: 15px;
+      line-height: 1.9;
+      color: #cbd5e1;
+    }
+
+    .details a {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+
+    @media (min-width: 700px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>
-
 <body>
-
-  <div class="container">
-
+  <main class="wrap">
     <h1>ProxiMA Nexus</h1>
-    <p class="subtitle">Structured detection. Verified reality.</p>
+    <p class="tagline">Structured detection. Verified reality.</p>
 
-    <img src="20260406_162934.jpg" alt="ProxiMA Nexus Logo">
+    <img
+      src="20260406_162934.jpg"
+      alt="ProxiMA Nexus Logo"
+      class="logo"
+    />
 
-    <div class="section">
-      <div class="card">
+    <section class="panel">
+      <h2>Operational Intelligence Platform</h2>
+      <p>
+        ProxiMA Nexus is designed to identify structural weakness, surface hidden
+        operational patterns, and convert observation into controlled intelligence
+        for environments where credibility, timing, and clarity matter.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
         <h3>Detection</h3>
-        <p>Identifying structural weaknesses and hidden operational patterns.</p>
-      </div>
+        <p>Capturing operational signals that are often overlooked in routine environments.</p>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Verification</h3>
-        <p>Filtering noise and confirming what is real and actionable.</p>
-      </div>
+        <p>Filtering noise and confirming what is valid, relevant, and actionable.</p>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Delivery</h3>
-        <p>Providing clear, structured outputs for decision-making.</p>
+        <p>Presenting structured output that supports informed response and clear decisions.</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Current Focus</h2>
+      <p>
+        ProxiMA Nexus is currently positioned for healthcare and social care
+        environments where trust must be earned through structure.
+      </p>
+    </section>
+
+    <section class="contact">
+      <a class="button" href="mailto:contact@proximanexus.co.uk">Contact ProxiMA Nexus</a>
+      <div class="details">
+        <div><a href="mailto:contact@proximanexus.co.uk">contact@proximanexus.co.uk</a></div>
+        <div><a href="https://proximanexus.co.uk">www.proximanexus.co.uk</a></div>
       </div>
-    </div>
-
-    <div class="section">
-      <h2>Positioning</h2>
-      <p>Built for healthcare, social care, and operational environments where accuracy and trust matter.</p>
-    </div>
-
-    <div class="section">
-      <a class="button" href="mailto:contact@proximanexus.co.uk">
-        Contact ProxiMA Nexus
-      </a>
-    </div>
-
-  </div>
-
+    </section>
+  </main>
 </body>
 </html>
